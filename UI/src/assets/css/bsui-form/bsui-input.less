@@ -1,0 +1,24 @@
+@import '../base/mixin.less';
+@import '../base/variable.less';
+.bsui-input {
+	width: 100%;
+	border: 0;
+	outline: 0;
+	-webkit-appearance: none;
+	background-color: transparent;
+	font-size: inherit;
+	color: inherit;
+	height: 1.5em;
+	line-height: 1.5;
+	text-align: right;
+
+	// hides the spin-button
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	&::placeholder{
+		color:@bsuiCellRightColor;
+	}
+}

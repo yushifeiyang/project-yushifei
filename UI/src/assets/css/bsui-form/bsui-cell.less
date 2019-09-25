@@ -1,0 +1,75 @@
+@import '../base/mixin.less';
+@import '../base/variable.less';
+.bsui-cell {
+	padding: @bsuiCellGapV 0;
+	position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
+	display: flex;
+	align-items: center;
+	font-size: @bsuiCellFontSize;
+	color: @bsuiCellColor;
+	&::before {
+		.setBottomLine(@bsuiCellBorderColor);
+		left: 0;
+		z-index: 2;
+	}
+	&:last-child {
+		&:before {
+			display: none;
+		}
+	}
+}
+.bsui-cell__bd {
+	flex: 1;
+}
+
+.bsui-cell_select{
+	padding: 0;
+	.bsui-cell__bd{
+		position: relative;
+		color: @bsuiCellRightColor;
+		&::after{
+			content:'';
+			.setArrow(right, 8px, #B2B2B2, 2px);
+		}
+		.bsui-select{
+			color: @bsuiCellRightColor;
+		}
+	}
+}
+// 信息展示列表
+.bsui-cell__describe {
+	.bsui-cell__bd{
+		p{
+			text-align: right;
+			color: @bsuiCellRightColor;
+		}
+	}
+}
+// 可点击信息展示列表
+.bsui-cell__link{
+	.bsui-cell__bd {
+		display: block;
+		position: relative;
+		height: 24px;
+		&::after{
+			content:'';
+			.setArrow(right, 8px, #B2B2B2, 2px);
+		}
+		&:visited{
+			background: @bsuiCellRightActiveColor;
+		}
+		&:active {
+			background: @bsuiCellRightActiveColor;
+		}
+	}
+}
+
+.bsui-label {
+	display: block;
+	width: @bsuiCellLabelWidth;
+	.text_wrap();
+	span{
+		color: #E81639;
+		vertical-align: middle;
+	}
+}

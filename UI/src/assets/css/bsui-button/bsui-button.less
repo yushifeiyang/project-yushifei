@@ -1,0 +1,99 @@
+@import "../base/mixin.less";
+@import "../base/variable.less";
+// global start
+.bsui-btn {
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 12.5px 24px;
+	box-sizing: border-box;
+	font-weight: 700;
+	font-size: @bsuiBtnFontSize;
+	text-align: center;
+	text-decoration: none;
+	color: @bsuiBtnFontColor;
+	border-radius: @bsuiBtnBorderRadius;
+	.setTapColor();
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.bsui-btn_inline {
+  display: inline-block;
+}
+// global over
+.bsui-btn + .bsui-btn{
+	margin-top: @bsuiBtnMarginTop;
+}
+// primary button
+.bsui-btn_primary {
+    background-color: @bsuiBtnPrimaryBg;
+    &:not(.bsui-btn_primary_disabled):visited {
+        color: @bsuiBtnFontColor;
+    }
+    &:not(.bsui-btn_primary_disabled):active {
+        color: @bsuiBtnActiveFontColor;
+        background-color: @bsuiBtnPrimaryActiveBg;
+    }
+}
+.bsui-btn_primary_disabled {
+	color: @bsuiBtnPrimaryDisabledFontColor;
+	background-color: @bsuiBtnPrimaryDisabledBg;
+}
+
+// primary over
+// primary with border
+.bsui-btn_primary_border {
+		border: 1px solid @bsuiBtnPrimaryBg;
+		color: @bsuiBtnPrimaryBg;
+    &:not(.bsui-btn_primary_border_disabled):visited {
+        color: @bsuiBtnFontColor;
+    }
+    &:not(.bsui-btn_primary_border_disabled):active {
+        color: @bsuiBtnActiveFontColor;
+				background-color: @bsuiBtnPrimaryActiveBg;
+    }
+}
+.bsui-btn_primary_border_disabled {
+	color: @bsuiBtnPrimaryBorderDisabledFontColor;
+	border: 1px solid @bsuiBtnPrimaryDisabledBg;
+}
+
+// primary with border over
+// warn button
+.bsui-btn_warn {
+    .setBgGradient(@bsuiBtnWarnBgStart, @bsuiBtnWarnBgEnd);
+    &:not(.bsui-btn_warn_disabled):visited {
+        color: @bsuiBtnFontColor;
+    }
+    &:not(.bsui-btn_warn_disabled):active {
+        color: @bsuiBtnActiveFontColor;
+        .setBgGradient(@bsuiBtnWarnActiveBgStart, @bsuiBtnWarnActiveBgEnd);
+    }
+}
+.bsui-btn_warn_disabled {
+	color: @bsuiBtnDisabledFontColor;
+	.setBgGradient(@bsuiBtnWarnDisableBgStart, @bsuiBtnWarnDisableBgEnd);
+}
+// warn over
+// default button
+.bsui-btn_default {
+		background-color: @bsuiBtnDefaultBg;
+		color: @bsuiBtnDefaultFontColor;
+		border: 1px solid @bsuiBtnDefaultBorderColor;
+    &:not(.bsui-btn_default_disabled):visited {
+        color: @bsuiBtnDefaultFontColor;
+    }
+    &:not(.bsui-btn_default_disabled):active {
+        color: @bsuiBtnDefaultFontColor;
+        background-color: @bsuiBtnDefaultActiveBg;
+    }
+}
+.bsui-btn_default_disabled {
+	color: @bsuiBtnDefaultDisableFontColor;
+	border: 1px solid @bsuiBtnDefaultDisableBorder;
+}
+// default over
+
+

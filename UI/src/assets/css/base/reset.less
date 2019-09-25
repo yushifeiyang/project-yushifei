@@ -1,0 +1,30 @@
+@import "./variable.less";
+@import "./mixin.less";
+
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	font: 12px/1.5 @weuiFontDefault;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a img {
+	border: 0;
+}
+
+a {
+	text-decoration: none;
+	.setTapColor();
+}
+
+input,
+textarea {
+	caret-color: @bsuiBtnPrimaryBg;
+}

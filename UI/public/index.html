@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>UI</title>
+	<style>
+	.container{padding:0 15px; padding-bottom: 100px;}
+	h2{padding: 10px 0; text-align: center;}
+	h3{margin: 6px 0;}
+	.marginTop{margin-top: 15px;}
+	.flex-box{display: flex;}
+	.flex-box .box{flex: 1; }
+	.flex-box .box:first-child{padding-right: 8px;}
+	.flex-box .box:last-child{padding-left: 8px;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div>
+			<h2>button</h2>
+			<a class="bsui-btn bsui-btn_primary" href="javascript:;">按钮</a>
+			<a class="bsui-btn bsui-btn_primary bsui-btn_primary_disabled" href="javascript:;">按钮</a>
+			<a class="bsui-btn bsui-btn_warn" href="javascript:;">按钮</a>
+			<a class="bsui-btn bsui-btn_warn bsui-btn_warn_disabled" href="javascript:;">按钮</a>
+			<a class="bsui-btn bsui-btn_default" href="javascript:;">按钮</a>
+			<a class="bsui-btn bsui-btn_default bsui-btn_default_disabled" href="javascript:;">按钮</a>
+			<a class="bsui-btn bsui-btn_primary_border" href="javascript:;">按钮</a>
+			<a class="bsui-btn bsui-btn_primary_border bsui-btn_primary_border_disabled" href="javascript:;">按钮</a>
+		</div>
+		<h3 class="marginTop">两栏</h3>
+		<div class="flex-box">
+			<div class="box"><a class="bsui-btn bsui-btn_primary" href="javascript:;">按钮</a></div>
+			<div class="box"><a class="bsui-btn bsui-btn_warn" href="javascript:;">按钮</a></div>
+		</div>
+		<h3>自定义宽高，高度控制padding</h3>
+		<div class="marginTop">
+			<a class="bsui-btn bsui-btn_primary" style="padding: 4.5px 15px; width: 100px; font-size: 14px;" href="javascript:;">按钮</a>
+			<a class="bsui-btn bsui-btn_primary bsui-btn_primary_disabled"
+				style="padding: 4.5px 15px; width: 100px; font-size: 14px;"
+				href="javascript:;">按钮</a>
+			<a class="bsui-btn bsui-btn_warn" style="padding: 4.5px 15px; width: 100px; font-size: 14px;"
+				href="javascript:;">按钮</a>
+			<a class="bsui-btn bsui-btn_warn bsui-btn_warn_disabled" style="padding: 4.5px 15px; width: 100px; font-size: 14px;"
+				href="javascript:;">按钮</a>
+			<a class="bsui-btn bsui-btn_default" style="padding: 4.5px 15px; width: 100px; font-size: 14px;"
+				href="javascript:;">按钮</a>
+			<a class="bsui-btn bsui-btn_default bsui-btn_default_disabled"
+				style="padding: 4.5px 15px; width: 100px; font-size: 14px;"
+				href="javascript:;">按钮</a>
+		</div>
+		<h2>Cell</h2>
+		<div class="">
+			<h3>选择框列表</h3>
+			<div class="bsui-cell bsui-cell_select">
+				<div class="bsui-cell__hd">
+					<label class="bsui-label" for="">证件类型<span>*</span></label>
+				</div>
+				<div class="bsui-cell__bd">
+					<select class="bsui-select" name="" id="">
+						<option value="1">身份证</option>
+						<option value="2">军人证</option>
+					</select>
+				</div>
+			</div>
+			<h3>带输入框列表</h3>
+			<div class="bsui-cell">
+				<div class="bsui-cell__hd">
+					<label class="bsui-label" for="">证件号码<span>*</span></label>
+				</div>
+				<div class="bsui-cell__bd">
+					<input class="bsui-input" type="text" placeholder="证件号码">
+				</div>
+			</div>
+			<h3>信息展示列表</h3>
+			<div class="bsui-cell bsui-cell__describe">
+				<div class="bsui-cell__hd">
+					<label class="bsui-label" for="">国籍</label>
+				</div>
+				<div class="bsui-cell__bd">
+					<p>中国</p>
+				</div>
+			</div>
+			<h3>可点击信息展示列表</h3>
+			<div class="bsui-cell bsui-cell__link">
+				<div class="bsui-cell__hd">
+					<label class="bsui-label" for="">查看详情</label>
+				</div>
+				<a href="javascript:;" class="bsui-cell__bd">
+				</a>
+			</div>
+		</div>
+	</div>
+
+	
+</body>
+</html>
