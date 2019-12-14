@@ -6,21 +6,12 @@ const router = new Router({
   routes: [
     {
       path: '/',
-			name: 'defaultIndex',
-			redirect: '/index',
-			component: resolve => require(['@/Pages/Home/index.vue'], resolve),
-      meta: {
-        title: '首页'
-      }
-    },
-    {
-      path: '/index',
 			name: 'index',
 			component: resolve => require(['@/Pages/Home/index.vue'], resolve),
       meta: {
         title: '首页'
       }
-		},
+    },
     {
       path: '/authToken',
       name: 'authToken',
@@ -29,14 +20,14 @@ const router = new Router({
         title: '验证权限'
       }
     },
-    {
-      path: '*',
-      name: 'notFound',
-			component: resolve => require(['@/Pages/notFound/404.vue'], resolve),
-      meta: {
-        title: '404'
-      }
-		},
+    // {
+    //   path: '*',
+    //   name: 'notFound',
+		// 	component: resolve => require(['@/Pages/notFound/404.vue'], resolve),
+    //   meta: {
+    //     title: '404'
+    //   }
+		// },
     {
       path: '/error',
       name: 'notFound',
@@ -46,7 +37,7 @@ const router = new Router({
       }
 		},
     {
-      path: '/demo/:id',
+      path: '/demo',
       name: 'test',
 			component: resolve => require(['@/components/HelloWorld.vue'], resolve),
       meta: {

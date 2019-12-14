@@ -13,6 +13,7 @@ export default {
 		// 	this.$loading(false, '');
 		// 	console.log('getHelp res', res);
 		// });
+		sessionStorage.setItem('yu-id', 'yushifei');
 	},
 	methods: {
 		linkTo () {
@@ -29,6 +30,8 @@ export default {
 	}
 };
 </script>
-<style lang="scss" scoped>
-
+<style lang="less" scoped>
+div{
+	font-size: 32px;/*px*/
+}
 </style>

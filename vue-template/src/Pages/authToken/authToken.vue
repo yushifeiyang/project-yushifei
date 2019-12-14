@@ -64,5 +64,5 @@ export default {
 	watch: {}
 };
 </script>
-<style lang="scss" scoped>
+<style lang="less" scoped>
 </style>

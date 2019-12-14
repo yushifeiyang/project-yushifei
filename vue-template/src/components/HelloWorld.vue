@@ -16,11 +16,15 @@ export default {
 			this.$loading(false, '');
 			console.log('getHelp res', res);
 		});
+		// console.log('yu-id==', sessionStorage.getItem('yu-id'));
   },
   methods: {},
   components: {},
   watch: {}
 };
 </script>
-<style lang="scss" scoped>
+<style lang="less" scoped>
+div{
+	font-size: 32px;/*px*/
+}
 </style>
