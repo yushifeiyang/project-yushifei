@@ -38,18 +38,33 @@ _axios.interceptors.response.use(
 						return axios2.post(url, {authCode: authcode.param.authCode}).then(cookie => {
 							console.log('axios2 initCookie==', cookie);
 							if (cookie.errorCode.toString() === '0') {
-								return axios2({
-								  method: response.config.method,
-								  url: response.config.url,
-								  data: response.config.data
-								}).then(axios2Res => {
-									if (axios2Res.errorCode.toString() === '0') {
-										console.log('axios2 res ==', axios2Res);
-										return axios2Res;
-									} else {
-										app.$toast.center(axios2Res.value);
-									}
-								});
+								if (response.config.method === 'get') {
+								  return axios2({
+								    method: response.config.method,
+								    url: response.config.url,
+								    params: response.config.params
+								  }).then(axios2Res => {
+								    if (axios2Res.errorCode.toString() === '0') {
+								      console.log('axios2Res get ==', axios2Res);
+								      return axios2Res;
+								    } else {
+								      app.$toast.center(axios2Res.value);
+								    }
+								  });
+								} else {
+								  return axios2({
+								    method: response.config.method,
+								    url: response.config.url,
+								    data: response.config.data
+								  }).then(axios2Res => {
+								    if (axios2Res.errorCode.toString() === '0') {
+								      console.log('axios2Res post ==', axios2Res);
+								      return axios2Res;
+								    } else {
+								      app.$toast.center(axios2Res.value);
+								    }
+								  });
+								}
 							} else {
 								return Promise.reject(cookie);
 							}
