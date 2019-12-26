@@ -6,11 +6,9 @@ export default {
 			if (!loading) {
 				const LoadingObj = Vue.extend(Loading);
 				loading = new LoadingObj();
-				if (!loading.$el) {
-					loading.$mount();
-					loading.setInfo(info);
-					document.querySelector('body').appendChild(loading.$el);
-				}
+				loading.$mount();
+				loading.setInfo(info);
+				document.querySelector('body').appendChild(loading.$el);
 			}
       if (bool) {
         loading.open();

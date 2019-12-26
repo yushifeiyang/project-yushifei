@@ -2,18 +2,15 @@
   <div class="messageBoxWrap" v-show="boxStatus">
     <div class="mask"></div>
     <div class="messageBox">
-			<div class="messageBoxMain">
-				<div class="messageBoxTitle" v-show="boxData.title">
-					<h1>{{boxData.title}}</h1>
-				</div>
-				<div class="messageBoxContent">
-					<p><span>{{boxData.content}}</span></p>
-				</div>
-				<div class="messageBoxButton clearfix">
-					<button type="button" class="lt" @click="cancelFn">{{ boxData.cancelText }}</button>
-					<button type="button" class="rt" @click="okFn">{{ boxData.okText }}</button>
-				</div>
-			</div>
+      <div class="messageBoxTitle">
+        <h1>{{boxData.title}}</h1>
+      </div>
+      <div class="messageBoxContent">
+        <div v-html="boxData.content"></div>
+      </div>
+      <div class="messageBoxButton clearfix">
+        <button type="button" class="rt" @click="deleteConfirmOK">确定</button>
+      </div>
     </div>
   </div>
 </template>
@@ -22,14 +19,7 @@ export default {
   data () {
     return {
 			boxStatus: false,
-			boxData: {
-				title: '', 
-				content: '内容', 
-				okText: '确定', 
-				cancelText: '取消', 
-				cancelCallback: function () { console.log('cancel'); }, 
-				okCallback: function () { console.log('ok'); }
-			}
+			boxData: {title: '标题', content: '内容', ok: function () { console.log('执行删除操作'); }}
     };
   },
 	methods: {
@@ -39,21 +29,17 @@ export default {
 		close () {
 			this.boxStatus = false;
 		},
-		cancelFn () {
-			this.boxData.cancelCallback();
-			this.close();
-		},
 		setInfo (item) {
-			this.boxData = Object.assign({}, this.boxData, item);
+			this.boxData = item;
 		},
-		okFn () {
-			this.boxData.okCallback();
+		deleteConfirmOK () {
+			this.boxData.ok();
 			this.close();
 		}
 	}
 };
 </script>
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .messageBoxWrap{
   width: 100%;
   height: 100%;
@@ -63,7 +49,7 @@ export default {
   bottom: 0;
   right: 0;
   background: transparent;
-  z-index: 1000;
+  z-index: 110;
 }
 .mask{
   width: 100%;
@@ -82,12 +68,10 @@ export default {
   border-radius: 20px;
   overflow: hidden;
 }
-.messageBoxMain{
-	padding-top: 30px;
-}
 .messageBoxTitle{
   width: 100%;
   height: 88px;
+  padding-top: 30px;
 }
 .messageBoxTitle h1{
   height: 88px;
@@ -104,27 +88,22 @@ export default {
   padding:0 30px 30px 30px;
   min-height: 88px;
   font-size: 32px;
-  color: #333;
-}
-.messageBoxContent>p{
+	color: #333;
 	text-align: center;
-}
-.messageBoxContent>p>span{
-	display: inline-block;
-	text-align: left;
 }
 .messageBoxButton{
   height: 88px;
 	button{
 		font-size: 32px;
 		color: #333333;
-		width: 50%;
+		width: 100%;
 		height: 100%;
 		outline: 1px solid #F4F4F5;
 		border-radius: 4px;
 		float: left;
 		border: none;
 		background: #fff;
+		color: #317DFF;
 	}
 }
 </style>

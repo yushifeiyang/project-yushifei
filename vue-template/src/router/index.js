@@ -38,7 +38,7 @@ const router = new Router({
 		},
     {
       path: '/demo',
-      name: 'test',
+      name: 'demo',
 			component: resolve => require(['@/components/HelloWorld.vue'], resolve),
       meta: {
         title: '测试页'
