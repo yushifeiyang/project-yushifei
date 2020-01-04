@@ -11,7 +11,7 @@ axios2.interceptors.request.use(config => {
 	// config.headers['Content-Type'] = 'application/json;';
   return config;
 }, error => { // 请求错误处理
-	console.log('request error');
+	console.log('request axios2 error');
   app.$router.push('/error');
   return Promise.reject(error);
 });
@@ -23,8 +23,8 @@ axios2.interceptors.response.use(
 			if (response.data.errorCode.toString() === '0') {
 				return response.data;
 			} else {
-				app.$loading(false, '');
-				app.$toast.center(response.data.value);
+				// app.$loading(false, '');
+				// app.$toast.center(response.data.value);
 				return response.data;
 			}
 		} else {
@@ -32,7 +32,7 @@ axios2.interceptors.response.use(
 		}
   },
 	error => { // 响应错误处理
-		console.log('response error');
+		console.log('response axios2 error');
 		app.$loading(false, '');
 		app.$router.push({
 			path: '/error',

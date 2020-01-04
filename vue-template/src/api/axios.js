@@ -23,7 +23,7 @@ _axios.interceptors.request.use(config => {
 // respone拦截器==>对响应做处理
 _axios.interceptors.response.use(
 	response => { // 成功请求到数据
-		// console.log('axios response=', response);
+		console.log('axios response=', response);
 		// console.log('axios respone拦截器 router=', app.$route);
 		if (response.data.errorCode) {
 			if (response.data.errorCode.toString() === '0') {
