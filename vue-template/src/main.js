@@ -16,7 +16,7 @@ import '@/plugin/toast/toast.less';
 import Toast from '@/plugin/toast/toast.js';
 // 模拟数据
 import './mock/index.js';
-console.log('env==', process.env.NODE_ENV);
+console.log('env==', process);
 Vue.config.productionTip = false;
 
 // 手势事件
