@@ -1,0 +1,87 @@
+.rounded(@radius) {
+	-webkit-border-radius: @radius;
+			-moz-border-radius: @radius;
+					border-radius: @radius;
+}
+.shadow(@x, @y, @blur, @color) {
+  -webkit-box-shadow: @x @y @blur @color;
+     -moz-box-shadow: @x @y @blur @color;
+          box-shadow: @x @y @blur @color;
+}
+.shadow-inset(@x, @y, @blur, @color) {
+    -webkit-box-shadow: inset @x @y @blur @color;
+       -moz-box-shadow: inset @x @y @blur @color;
+            box-shadow: inset @x @y @blur @color;
+}
+.transition(@property) {
+    -webkit-transition: @property .2s ease;
+       -moz-transition: @property .2s ease;
+         -o-transition: @property .2s ease;
+            transition: @property .2s ease;
+}
+.box-sizing {
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+// 从左到右渐变
+.linear-gradient(@start :#00ffff, @end :#9fffff) {
+	background-color:@start;
+  background: -webkit-linear-gradient(left, @start, @end);
+  background: -webkit-gradient(linear, 0 50%, 100% 50%, from(@start), to(@end));
+	background: -moz-linear-gradient(left, @start, @end);
+	background: linear-gradient(left, @start , @end);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@start, endColorstr=@end, grandientType=0);
+}
+// 1px 问题
+.setTopLine(@c: #C7C7C7) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;/*no*/
+  border-top: 1px solid @c;/*no*/
+  color: @c;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+
+.setBottomLine(@c: #C7C7C7) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;/*no*/
+  border-bottom: 1px solid @c;/*no*/
+  color: @c;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+
+.setLeftLine(@c: #C7C7C7) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;/*no*/
+  bottom: 0;
+  border-left: 1px solid @c;/*no*/
+  color: @c;
+  transform-origin: 0 0;
+  transform: scaleX(0.5);
+}
+
+.setRightLine(@c: #C7C7C7) {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;/*no*/
+  bottom: 0;
+  border-right: 1px solid @c;/*no*/
+  color: @c;
+  transform-origin: 100% 0;
+  transform: scaleX(0.5);
+}

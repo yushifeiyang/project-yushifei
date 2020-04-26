@@ -5,17 +5,15 @@ import App from './App';
 import router from './router';
 import store from './vuex/index';
 import VueTouch from 'vue-touch';
-import 'lib-flexible/flexible';
 // 1rem = 75px
 import iNoBounce from 'inobounce';
-import './assets/css/reset.scss';
+import './assets/css/reset.less';
 // this.$loading(true, 'loading...');
 import Loading from '@/plugin/loading/loading.js';
 import confirmBox from '@/plugin/confirmBox/confirmBox.js';
 // this.$toast.top('top');
-import '@/plugin/toast/toast.scss';
+import '@/plugin/toast/toast.less';
 import Toast from '@/plugin/toast/toast.js';
-import './plugin/vconsole';
 // 模拟数据
 import './mock/index.js';
 console.log('env==', process.env.NODE_ENV);
