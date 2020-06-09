@@ -1,8 +1,11 @@
 import axios from 'axios';
 import app from '../main';
 import axios2 from './axios_2';
-import { STAGE_BASE_URL } from './config';
+import ENV from './config';
 import { getAuthCodeFn } from '../assets/js/common';
+
+const { STAGE_BASE_URL } = ENV;
+
 // 创建axios实例
 const _axios = axios.create({
   baseURL: '', // api的base_url

@@ -1,5 +1,7 @@
-import { STAGE_BASE_URL } from './config';
+import ENV from './config';
 import axios from './axios';
+
+const { STAGE_BASE_URL } = ENV;
 
 export function initCookie (obj) {
   const url = STAGE_BASE_URL + '/medical-supervision/system/initCookie';

@@ -9,31 +9,19 @@ const router = new Router({
 			name: 'index',
 			component: resolve => require(['@/Pages/Home/index.vue'], resolve),
       meta: {
-        title: '首页'
+				title: '首页',
+				keepAlive: false,
+				userAuth: false
       }
     },
-    {
-      path: '/authToken',
-      name: 'authToken',
-      component: resolve => require(['@/Pages/authToken/authToken.vue'], resolve),
-      meta: {
-        title: '验证权限'
-      }
-    },
-    // {
-    //   path: '*',
-    //   name: 'notFound',
-		// 	component: resolve => require(['@/Pages/notFound/404.vue'], resolve),
-    //   meta: {
-    //     title: '404'
-    //   }
-		// },
     {
       path: '/error',
       name: 'notFound',
 			component: resolve => require(['@/Pages/notFound/error.vue'], resolve),
       meta: {
-        title: '出错啦'
+				title: '出错啦',
+				keepAlive: false,
+				userAuth: false
       }
 		},
     {
@@ -41,7 +29,9 @@ const router = new Router({
       name: 'demo',
 			component: resolve => require(['@/components/HelloWorld.vue'], resolve),
       meta: {
-        title: '测试页'
+				title: '测试页',
+				keepAlive: false,
+				userAuth: false
       }
     }
   ]

@@ -5,7 +5,7 @@ import App from './App';
 import router from './router';
 import store from './vuex/index';
 import VueTouch from 'vue-touch';
-// 1rem = 75px
+// ios端禁止回弹
 import iNoBounce from 'inobounce';
 import './assets/css/reset.less';
 // this.$loading(true, 'loading...');

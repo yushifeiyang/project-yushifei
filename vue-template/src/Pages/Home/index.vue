@@ -3,6 +3,7 @@
 		index
 		<img src="http://p6e7vhrci.bkt.clouddn.com/FkL7J5AzU8I-wfXhDj2qtft4XOHU" width="300" alt="">
 		<button @click="linkTo">link to test</button>
+		<div class="class">aa</div>
 	</div>
 </template>
 <script>
@@ -31,7 +32,10 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-div{
-	font-size: 32px;/*px*/
+.class {
+  width: 100px;
+  padding: 10px;
+	height: 100px; 
+	border: solid 1px #000; 
 }
 </style>
