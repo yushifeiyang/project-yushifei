@@ -9,7 +9,6 @@ import PageRedux from '../Pages/page-redux/store';
 const routes = [
 	{
 		path: "/",
-    exact: true,
 		component: Home
 	},
 	{
