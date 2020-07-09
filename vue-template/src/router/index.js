@@ -7,7 +7,7 @@ const router = new Router({
     {
       path: '/',
 			name: 'index',
-			component: resolve => require(['@/Pages/Home/index.vue'], resolve),
+			component: () => import(/* webpackChunkName: "index" */'@/Pages/Home/index.vue'),
       meta: {
 				title: '首页',
 				keepAlive: false,
@@ -16,8 +16,8 @@ const router = new Router({
     },
     {
       path: '/error',
-      name: 'notFound',
-			component: resolve => require(['@/Pages/notFound/error.vue'], resolve),
+			name: 'notFound',
+			component: () => import(/* webpackChunkName: "error" */'@/Pages/notFound/error.vue'),
       meta: {
 				title: '出错啦',
 				keepAlive: false,
@@ -26,8 +26,8 @@ const router = new Router({
 		},
     {
       path: '/demo',
-      name: 'demo',
-			component: resolve => require(['@/components/HelloWorld.vue'], resolve),
+			name: 'demo',
+			component: () => import(/* webpackChunkName: "demo" */'@/components/HelloWorld.vue'),
       meta: {
 				title: '测试页',
 				keepAlive: false,
@@ -40,9 +40,7 @@ const router = new Router({
 // 添加全局更改路由title的方法
 router.beforeEach((to, from, next) => {
   // 路由发生变化更改title
-  if (to.meta.title) {
-    document.title = to.meta.title;
-  }
+  document.title = to.meta.title || '';
   next();
 });
 
