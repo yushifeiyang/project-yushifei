@@ -9,14 +9,17 @@ import PageRedux from '../Pages/page-redux/store';
 const routes = [
 	{
 		path: "/",
+		exact: true,
 		component: Home
 	},
 	{
 		path: "/test",
+		exact: true,
 		component: Test
 	},
 	{
 		path: "/propTypes",
+		exact: true,
 		component: PropTypes
 	},
 	{
@@ -26,17 +29,20 @@ const routes = [
 			{
 				path: "/pageRouter/top",
 				name: 'top component',
+				exact: true,
 				component: Top
 			},
 			{
 				path: "/pageRouter/bottom",
 				name: 'bottom component',
+				exact: true,
 				component: Bottom
 			}
 		]
 	},
 	{
 		path: "/redux",
+		exact: true,
 		component: PageRedux
 	}
 ]

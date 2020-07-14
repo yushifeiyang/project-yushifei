@@ -9,6 +9,9 @@ class Home extends Component {
 			 <p>这里显示state里的值：
 				 <span style={{color:"#f00"}}>{this.props.todos}</span>
 				</p>
+				<p onClick={() => {
+					this.props.history.push('/test');
+				}}>到test页</p>
 		 </div>
 	 )
  }

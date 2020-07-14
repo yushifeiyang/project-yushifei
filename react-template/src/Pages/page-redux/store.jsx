@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { setPageTitle, setInfoList } from '../../Redux/action/action'
-
+import { withRouter } from "react-router-dom";
 
 class PageRedux extends Component {
 	componentDidMount() {
@@ -38,6 +38,9 @@ class PageRedux extends Component {
 				{
 					infoList
 				}
+				<p onClick={() => {
+					this.props.history.push('/');
+				}}>返回首页</p>
 			</div>
 		)
 	}
@@ -65,4 +68,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PageRedux)
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(PageRedux));
