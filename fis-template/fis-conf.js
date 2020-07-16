@@ -18,6 +18,7 @@ fis.match('css0/index/**.less', {
 	rExt: '.css',
 	useHash: true,
 	parser: fis.plugin('less'),
+	optimizer: fis.plugin('clean-css'),
 	packTo: 'css/index.min.css'
 })
 
@@ -25,6 +26,7 @@ fis.match('css0/about/**.less', {
 	rExt: '.css',
 	useHash: true,
 	parser: fis.plugin('less'),
+	optimizer: fis.plugin('clean-css'),
 	packTo: 'css/about.min.css'
 });
 /************************ css *****************************/
@@ -38,6 +40,7 @@ fis.match('js0/index/**.js', {
 			drop_console: true
 		}
 	}),
+	optimizer: fis.plugin('uglify-js'),
 	packTo: 'js/index.min.js'
 });
 /************************ js *****************************/
