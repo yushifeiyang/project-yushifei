@@ -1,1 +1,1 @@
-fis3 release -d ../hzbs-pc
+fis3 release -d ../fis-demo
