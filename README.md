@@ -15,3 +15,4 @@
 ### 测试git命令
 1.log
 2.relog
+3.reset
