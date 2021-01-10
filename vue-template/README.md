@@ -21,4 +21,4 @@ npm run build --report
 
 ## 说明
 
-可以直接打开开发ip
+可以直接打开开发ip.
