@@ -19,7 +19,7 @@ npm run build --report
 ```
 ## 使用的技术
 
-> vw + less + vuex +  vconsole + mock + vue-touch
+> vw + less + vuex +  vconsole + mock + vue-touch + vantUI
 > 
 ------
 
