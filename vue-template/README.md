@@ -1,7 +1,3 @@
-# template
-
-> 
-
 ## Build Setup
 
 ``` bash
