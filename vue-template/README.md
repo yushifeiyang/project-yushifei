@@ -19,7 +19,7 @@ npm run build --report
 ```
 ## 使用的技术
 
-> flexable + less/scss + vuex +  vconsole + mock + vue-touch
+> less + vuex +  vconsole + mock + vue-touch
 > 
 > 1rem === 75px
 ------
