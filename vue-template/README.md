@@ -19,9 +19,8 @@ npm run build --report
 ```
 ## 使用的技术
 
-> less + vuex +  vconsole + mock + vue-touch
+> vw + less + vuex +  vconsole + mock + vue-touch
 > 
-> 1rem === 75px
 ------
 
 ## 说明
