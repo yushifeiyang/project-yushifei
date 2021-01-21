@@ -4,10 +4,16 @@
 
 const path = require('path')
 const os = require('os')
-var needHost = '' // 打开的host
+var needHost = 'localhost' // 打开的host
 try {
-  let network = os.networkInterfaces() // 获得网络接口列表。
-  needHost = network[Object.keys(network)[0]][1].address // 本机ip
+  let network = os.networkInterfaces(); // 获得网络接口列表。
+  const netList = network[Object.keys(network)[0]];
+  netList.forEach(item => {
+    if (item.family == "IPv4") {
+      needHost = item.address;
+    }
+  })
+  
 } catch (e) {
   needHost = 'localhost'
 }

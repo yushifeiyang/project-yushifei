@@ -1,7 +1,3 @@
-# template
-
-> 
-
 ## Build Setup
 
 ``` bash
@@ -19,11 +15,10 @@ npm run build --report
 ```
 ## 使用的技术
 
-> flexable + less/scss + vuex +  vconsole + mock + vue-touch
+> vw + less + vuex +  vconsole + mock + vue-touch + vantUI
 > 
-> 1rem === 75px
 ------
 
 ## 说明
 
-可以直接打开开发ip
+可以直接打开开发ip.

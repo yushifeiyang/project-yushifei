@@ -4,16 +4,13 @@
 		<img src="http://p6e7vhrci.bkt.clouddn.com/FkL7J5AzU8I-wfXhDj2qtft4XOHU" width="300" alt="">
 		<button @click="linkTo">link to test</button>
 		<div class="class">aa</div>
+		<input type="text">
 	</div>
 </template>
 <script>
 // import { getUserInfo } from '../../api/orderList';
 export default {
 	mounted () {
-		// getUserInfo({'name': 'aa'}).then(res => {
-		// 	this.$loading(false, '');
-		// 	console.log('getHelp res', res);
-		// });
 		sessionStorage.setItem('yu-id', 'yushifei');
 	},
 	methods: {
