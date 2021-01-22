@@ -1,36 +1,16 @@
 <template>
 <div>
-    <el-form>
-        <el-form-item label="value-key">
-            <el-select v-model="permissionList" multiple placeholder="请选择" value-key="id">
-                <el-option v-for="item in groups" :key="item.id" :label="item.name" :value="item" />
-            </el-select>
-        </el-form-item>
-    </el-form>
+radio
 
 </div>
 
 </template>
 <script>
 export default {
-  name:'vSelect',
+  name:'vRadio',
   components: {},
   data() {
     return {
-			permissionList: [],
-			groups: [{
-				id: 1,
-				name: 'A组',
-				permission: 'Write'
-			},{
-				id: 2,
-				name: 'B组',
-				permission: 'Write'
-			},{
-				id: 3,
-				name: 'C组',
-				permission: 'Write'
-			}]
     };
   },
   watch: {
