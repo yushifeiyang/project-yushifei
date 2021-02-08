@@ -1,5 +1,5 @@
 <template>
-<div v-if="tableData && tableData.length" class="fuzzy-search" @mouseleave="mouseleaveFn" @mouseenter="mouseenterFn">
+<div v-if="tableData && tableData.length" class="fuzzy-search">
 
   <el-table 
     ref="fuzzyTable"
@@ -37,23 +37,11 @@ export default {
 
   },
   mounted () {
-      
+
   },
   methods: {
     rowClickFn(row, column, event){
       this.$emit("getFuzzyResult", row);
-      this.$emit("setVisible", false);
-    },
-    mouseleaveFn(){
-      const me = this;
-      document.addEventListener("click", me.clickFn, false)
-    },
-    mouseenterFn(){
-      const me = this;
-      document.removeEventListener("click", me.clickFn);
-    },
-    clickFn(){
-      console.log("===clickFn==========");
       this.$emit("setVisible", false);
     }
   },
