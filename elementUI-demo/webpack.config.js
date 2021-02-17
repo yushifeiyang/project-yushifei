@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+console.log("===============================");
+console.log(process.env.NODE_ENV);
 
 module.exports = {
   entry: path.join(__dirname, './src/main.js'),
