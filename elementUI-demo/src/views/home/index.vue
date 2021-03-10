@@ -1,13 +1,21 @@
 <template>
 <div>
   <el-button @click="showConfirm">显示confirmBox</el-button>
+  <test v-model="name"></test>
+  <p>{{name}}</p>
 </div>
 </template>
 <script>
+import test from "./test.vue";
+
 export default {
-  components: {},
+  components: {
+    "test": test
+  },
   data () {
-    return {};
+    return {
+      name: ""
+    };
   },
   watch: {},
   computed: {},
